@@ -10,6 +10,7 @@ Task Description 📄
 
 ## Task 4
 Task Description 📄  
+
 🔅 Task 4.1  
 📌 Create image by yourself Using Python Code  
 🔅 Task 4.2  
