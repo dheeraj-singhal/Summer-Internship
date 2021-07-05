@@ -63,8 +63,8 @@ plate_number = plate_number.replace('.','')
 # type(plate_number)
 
 def get_vehicle_info(plate_number):
-    r = requests.get("http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={0}&username=anand".format(str(plate_number)))
-    print(r.status_code)
+    r = requests.get("http://www.regcheck.org.uk/api/reg.asmx/CheckIndia?RegistrationNumber={0}&username=dheeraj".format(str(plate_number)))
+    # print(r.status_code)
     data = xmltodict.parse(xml_input = r.content, expat = expat)
     jdata = json.dumps(data)
     df = json.loads(jdata)
