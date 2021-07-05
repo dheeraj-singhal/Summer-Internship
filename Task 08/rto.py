@@ -8,5 +8,5 @@ import subprocess
 data=cgi.FieldStorage()
 cmd=data.getvalue("x")
 subprocess.getoutput("cd /root/task08/" )
-out = subprocess.getoutput("python3 task8.py " + cmd )
+out = subprocess.getoutput("python3 task08.py " + cmd )
 print(out)
