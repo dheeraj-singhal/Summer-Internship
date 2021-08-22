@@ -1,0 +1,122 @@
+<script>
+    function dheeraj() {
+    
+    var i = document.getElementById("input").value
+    
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open("GET","http://192.168.43.162/cgi-bin/task7.py?x="+i, true);
+    xhr.send();
+    
+    xhr.onload = function() {
+        var output = xhr.responseText;
+        document.getElementById("d1").innerHTML = output;
+        }
+    }
+</script>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker command</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+        background-image:url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F02%2F213048-path-nature-blurred-tunnel-trees-road.jpg&f=1&nofb=1") ;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .a5 {
+            text-align: center;
+            transform: scale(1,1);
+        }
+
+        #input {
+            font-size: 40px;
+            background-color: rgb(247, 237, 97)
+        }
+
+        .a4 {
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            top: 0px;
+        }
+        
+        .a3 {
+            background-color: rgb(34, 189, 70);
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .button{
+            padding: 20px;
+            margin:30px;
+            border: 0;
+            background: rgb(218, 3, 3);
+            color: white;
+            font-size: 10px;
+            transition: 0.3s;
+            outline: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 245px;
+            right: 10px;
+            box-shadow: 0 4px rgb(220, 54, 54);    
+        }
+
+        .button {
+            background-color: rgb(226, 55, 55);
+            font-size: 30px;
+            text-align: center;
+            top: 34px;
+        }
+
+        .button:hover {
+            background-color: #3e8e41
+        }
+    
+        .button:active {
+            background-color: #cf2e2e;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        #d1 {
+            color:rgba(0, 0, 0, 0.8)(127, 212, 71);
+            background-color: rgb(34, 189, 70);
+            font-size: 30px;
+            transform: scale(0.75,0.75);
+            position: relative;
+            bottom: 30px;
+            top: 170px;
+            text-shadow: 0 2px rgb(243,240,240);
+        }
+
+</style>
+<body>    
+    <div class="a4">
+        <h2><i><u> WELCOME TO THIS WEBSITE</u></i></h2>
+    </div>
+
+    <div class="a3"><i><b> [root @localhost~]# <input id="input" /></b></i></div>
+
+    <button class="button" onclick="dheeraj()">
+        <b>PROCEED</b>
+    </button>
+
+    <pre>
+        <div id="d1">Press <b>PROCEED</b> to see your output here.<div />
+        <div class="a5"><img src="https://media1.tenor.com/images/f55e8059ea945abfd6804b887dd4a0af/tenor.gif?itemid=12376852"
+                    alt="broken image"></div>
+    <pre /> 
+</body>
+</html>
